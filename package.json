@@ -1,0 +1,68 @@
+{
+  "name": "loopback4-classroom-api",
+  "version": "1.0.0",
+  "description": "a loopback4 api used to test repository model relations",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "scripts": {
+    "build": "lb-tsc es2017 --outDir dist",
+    "build:apidocs": "lb-apidocs",
+    "build:watch": "lb-tsc --watch",
+    "clean": "lb-clean dist",
+    "format": "npm run prettier:fix",
+    "lint": "npm run prettier:check && npm run tslint",
+    "lint:fix": "npm run tslint:fix && npm run prettier:fix",
+    "migrate": "node ./dist/src/migrate",
+    "posttest": "npm run lint",
+    "prepublishOnly": "npm run test",
+    "prestart": "npm run build",
+    "pretest": "npm run clean && npm run build",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "start": "node .",
+    "test": "lb-mocha --allow-console-logs \"dist/test\"",
+    "test:dev": "lb-mocha --allow-console-logs dist/test/**/*.js && npm run posttest",
+    "tslint": "lb-tslint",
+    "tslint:fix": "npm run tslint -- --fix"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "dist/src",
+    "dist/index*",
+    "src"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^1.0.11",
+    "@loopback/context": "^1.5.0",
+    "@loopback/core": "^1.1.5",
+    "@loopback/openapi-v3": "^1.2.0",
+    "@loopback/repository": "^1.1.4",
+    "@loopback/rest": "^1.5.4",
+    "@loopback/rest-explorer": "^1.1.7",
+    "@loopback/service-proxy": "^1.0.7",
+    "loopback-connector-mongodb": "^4.0.0",
+    "memory": "git+https://git@github.com/codejamninja/memory.git#npm"
+  },
+  "devDependencies": {
+    "@loopback/build": "^1.2.1",
+    "@loopback/testlab": "^1.0.5",
+    "@loopback/tslint-config": "^2.0.0",
+    "@types/node": "^10.11.2",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}
