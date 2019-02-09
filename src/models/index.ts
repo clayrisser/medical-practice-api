@@ -1,4 +1,3 @@
-export * from './class-room.model';
-export * from './homework.model';
-export * from './student.model';
-export * from './teacher.model';
+export * from './appointment.model';
+export * from './patient.model';
+export * from './physician.model';

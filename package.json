@@ -1,5 +1,5 @@
 {
-  "name": "loopback4-classroom-api",
+  "name": "medical-practice-api",
   "version": "1.0.0",
   "description": "a loopback4 api used to test repository model relations",
   "keywords": [

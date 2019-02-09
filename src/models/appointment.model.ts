@@ -1,7 +1,7 @@
 import { Entity, model, property } from '@loopback/repository';
 
 @model()
-export class Teacher extends Entity {
+export class Appointment extends Entity {
   @property({
     type: 'string',
     id: true
@@ -14,7 +14,7 @@ export class Teacher extends Entity {
   })
   name: string;
 
-  constructor(data?: Partial<Teacher>) {
+  constructor(data?: Partial<Appointment>) {
     super(data);
   }
 }

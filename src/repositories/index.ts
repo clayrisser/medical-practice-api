@@ -1,4 +1,3 @@
-export * from './class-room.repository';
-export * from './homework.repository';
-export * from './student.repository';
-export * from './teacher.repository';
+export * from './appointment.repository';
+export * from './patient.repository';
+export * from './physician.repository';

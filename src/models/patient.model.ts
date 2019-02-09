@@ -1,7 +1,7 @@
 import { Entity, model, property } from '@loopback/repository';
 
 @model()
-export class Student extends Entity {
+export class Patient extends Entity {
   @property({
     type: 'string',
     id: true
@@ -14,7 +14,7 @@ export class Student extends Entity {
   })
   name: string;
 
-  constructor(data?: Partial<Student>) {
+  constructor(data?: Partial<Patient>) {
     super(data);
   }
 }
