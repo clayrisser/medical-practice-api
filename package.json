@@ -54,7 +54,7 @@
     "@loopback/rest": "^1.5.4",
     "@loopback/rest-explorer": "^1.1.7",
     "@loopback/service-proxy": "^1.0.7",
-    "loopback-connector-mongodb": "^4.0.0",
+    "loopback-connector-mongodb": "^3.9.2",
     "memory": "git+https://git@github.com/codejamninja/memory.git#npm"
   },
   "devDependencies": {
