@@ -50,7 +50,7 @@
     "@loopback/context": "^1.5.0",
     "@loopback/core": "^1.1.5",
     "@loopback/openapi-v3": "^1.2.0",
-    "@loopback/repository": "^1.1.4",
+    "@loopback/repository": "git+https://git@github.com/codejamninja/loopback-next.git#codejamninja/repository/npm",
     "@loopback/rest": "^1.5.4",
     "@loopback/rest-explorer": "^1.1.7",
     "@loopback/service-proxy": "^1.0.7",

@@ -1,6 +1,6 @@
 import {
   DefaultCrudRepository,
-  HasManyRepositoryFactory,
+  HasManyThroughRepositoryFactory,
   repository
 } from '@loopback/repository';
 import { inject, Getter } from '@loopback/core';
@@ -15,7 +15,7 @@ export class PatientRepository extends DefaultCrudRepository<
   Patient,
   typeof Patient.prototype.id
 > {
-  public readonly physicians: HasManyRepositoryFactory<
+  public readonly physicians: HasManyThroughRepositoryFactory<
     Physician,
     typeof Patient.prototype.id
   >;
@@ -29,7 +29,7 @@ export class PatientRepository extends DefaultCrudRepository<
     getPhysicianRepository: Getter<PhysicianRepository>
   ) {
     super(Patient, dataSource);
-    this.physicians = this.createHasManyRepositoryFactoryFor(
+    this.physicians = this.createHasManyThroughRepositoryFactoryFor(
       'physicians',
       getPhysicianRepository,
       getAppointmentRepository
