@@ -5,7 +5,7 @@ import {
 } from '@loopback/repository';
 import { inject, Getter } from '@loopback/core';
 import { MemoryDataSource, MongoDataSource } from '../datasources';
-import { Patient, Physician } from '../models';
+import { Appointment, Patient, Physician } from '../models';
 import { AppointmentRepository, PhysicianRepository } from '../repositories';
 
 const { env } = process;
@@ -17,6 +17,7 @@ export class PatientRepository extends DefaultCrudRepository<
 > {
   public readonly physicians: HasManyThroughRepositoryFactory<
     Physician,
+    Appointment,
     typeof Patient.prototype.id
   >;
 
